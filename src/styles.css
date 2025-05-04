@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( to bottom right,rgb(201, 223, 243),rgb(74, 223, 185));
+}

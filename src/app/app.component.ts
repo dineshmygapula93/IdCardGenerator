@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'IdcardGenerator';
+
+  imageurl:string='';
+  name:string='';
+  designation:String='';
+  phonenumber:number=0;
+  address:String='';
 }
