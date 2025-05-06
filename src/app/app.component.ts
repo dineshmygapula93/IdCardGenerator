@@ -14,4 +14,13 @@ export class AppComponent {
   designation:String='';
   phonenumber:number=0;
   address:String='';
+
+  isCard:boolean=false;
+
+  showCard(){
+      this.isCard=true;
+  }
+  closeCard(){
+    this.isCard=false
+  }
 }

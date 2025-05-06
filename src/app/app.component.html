@@ -1,3 +1,4 @@
+
 <div class="enterdetail">
   <h1 class="title">ID Card Generator</h1>
   <h3 class="title1">Please Enter your Details </h3>
@@ -9,7 +10,17 @@
  <div class="inbox"> <label> <pre>Address     </pre>     </label><input type="text" [(ngModel)]="address"></div>
 </div>
 
-<div class="idcard">
+<button class="btn" (click)="showCard()">
+  <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+      <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+  </svg>
+
+  <span class="text">Open ID Card</span>
+</button>
+<div class="modal-overlay" *ngIf="isCard" (click)="closeCard()"></div>
+
+<div class="idcard-modal" *ngIf="isCard">
+<div class="idcard" >
   <div><h4>Identity Card</h4></div>
   <div class="idcarddetails"><div class="img">
     <img [src]="imageurl" alt="imageurl">
@@ -19,6 +30,8 @@
     <div class="detailname"><pre>Designation :</pre><h3>{{designation}}</h3></div>
     <div class="detailname"> <pre>Phone Number:</pre><h3>{{phonenumber}}</h3></div>
     <div class="detailname"><pre>Address     :</pre><h3 >{{address}}</h3></div>
+    <button class="btn1" (click)="closeCard()">Close</button>
   </div></div>
-  
+ 
+</div>
 </div>
